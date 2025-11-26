@@ -77,6 +77,18 @@ body.page-intro2.mode-write .intro2::after {
   z-index: -1;
 }
 
+body.page-intro2.mode-write .intro2::before {
+  content:'';
+  display:block;
+  position:fixed;
+  left:0;top:0;
+  height:100vh;
+  width:100vw;
+  background: url(../images/bg_sc2.svg) no-repeat 50%;
+  background-size:cover;
+}
+
+
 /* 쓰다 모드 전체 배경 */
 body.page-intro2.mode-write {
   background: #1C2E4F;
