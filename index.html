@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온독 플랫좀 - AI 기반 문해력 성장 시스템</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/include.js"></script>
+</head>
+<body class="page-home">
+    <!-- HEADER include -->
+  <div data-include="./include/header.html"></div>
+
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__background-text" aria-hidden="true">온전히 이어지다</div>
+
+            <!-- 가운데 텍스트 영역 -->
+            <div class="hero__container">
+                <div class="hero__content">
+                    <p class="hero__subtitle">AI 기반 문해력 성장 시스템</p>
+                    <h1 class="hero__title">온독 플랫폼</h1>
+                    <p class="hero__description">읽기와 쓰기의 연결, 문해력 성장을 완성하다</p>
+
+                    <div class="hero__actions">
+                        <button class="hero__button hero__button--secondary" id="go-ondoc">
+  <span class="primary">온독서</span> 바로가기
+</button>
+
+<button class="hero__button hero__button--secondary" id="go-onwrite">
+  <span class="primary">온작문</span> 바로가기
+</button>
+
+<script>
+  const btnOndoc   = document.getElementById('go-ondoc');
+  const btnOnwrite = document.getElementById('go-onwrite');
+
+  // 클릭 동작
+  btnOndoc.addEventListener('click', () => {
+    window.location.href = 'index2.html';
+  });
+
+  btnOnwrite.addEventListener('click', () => {
+    window.open('http://ai.withrun.co.kr:3002/', '_blank');
+  });
+
+  // hover / focus 시 클래스 토글 (읽고)
+  const addHoverRead = () => document.body.classList.add('hover-read');
+  const removeHoverRead = () => document.body.classList.remove('hover-read');
+
+  btnOndoc.addEventListener('mouseenter', addHoverRead);
+  btnOndoc.addEventListener('mouseleave', removeHoverRead);
+  btnOndoc.addEventListener('focus', addHoverRead);
+  btnOndoc.addEventListener('blur', removeHoverRead);
+
+  // hover / focus 시 클래스 토글 (쓰다)
+  const addHoverWrite = () => document.body.classList.add('hover-write');
+  const removeHoverWrite = () => document.body.classList.remove('hover-write');
+
+  btnOnwrite.addEventListener('mouseenter', addHoverWrite);
+  btnOnwrite.addEventListener('mouseleave', removeHoverWrite);
+  btnOnwrite.addEventListener('focus', addHoverWrite);
+  btnOnwrite.addEventListener('blur', removeHoverWrite);
+</script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 하단 오브젝트 영역 -->
+            <div class="hero-obj">
+
+  <!-- 반구 뒤 배경 텍스트 3개 -->
+  <div class="hero-obj__text hero-obj__text--full"></div>
+  <div class="hero-obj__text hero-obj__text--read"></div>
+  <div class="hero-obj__text hero-obj__text--write"></div>
+                <div class="hero-obj__base"></div>
+                <div class="hero-obj__item hero-obj__pencil"></div>
+                <div class="hero-obj__item hero-obj__paper"></div>
+                <div class="hero-obj__item hero-obj__od-character"></div>
+                <div class="hero-obj__item hero-obj__aichip"></div>
+                <div class="hero-obj__item hero-obj__ai"></div>
+                <div class="hero-obj__item hero-obj__child"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER include -->
+  <div data-include="./include/footer.html"></div>
+</body>
+</html>

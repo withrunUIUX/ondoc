@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>온독 플랫폼 인트로2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="page-intro2 mode-read">
+  <!-- 헤더 include (logo 들어있는 header.html) -->
+  <div data-include="./include/header.html"></div>
+
+  <div class="intro2-wrap">
+    <section class="intro2" aria-label="온독 플랫폼 소개">
+
+      <!-- 좌측 슬라이드 화살표 (intro1로 돌아가기 등 연결 시 사용) -->
+      <button type="button" class="intro2__arrow" aria-label="이전 슬라이드"></button>
+
+      <!-- 상단 타이틀 영역 -->
+      <header class="intro2__headline">
+        <div class="intro2__headline-sub">AI 기반 문해력 성장 시스템</div>
+        <h1 class="intro2__headline-title">온독 플랫폼</h1>
+        <div class="intro2__headline-tabs">
+          <!-- 읽고 탭 -->
+          <span class="headline-tab headline-tab--active" data-mode="read">
+            읽고
+          </span>
+          <!-- 쓰다 탭 -->
+          <span class="headline-tab headline-tab-link" data-mode="write">
+            쓰다
+          </span>
+        </div>
+      </header>
+
+      <!-- 읽고 / 쓰다 본문 스테이지 -->
+      <div class="intro2__stage">
+
+        <!-- =======================
+             READ 모드 (온독)
+        ======================== -->
+        <div class="intro2__body intro2__body--read is-active">
+          <!-- 가운데 폰 + 캐릭터 -->
+          <div class="intro2__center">
+            <div class="phone" aria-hidden="true">
+              <div class="phone__screen is-active" data-screen="screen1">
+                <img src="./images/intro_doc1.png" alt="">
+              </div>
+              <div class="phone__screen" data-screen="screen2">
+                <img src="./images/intro_doc2.png" alt="">
+              </div>
+              <div class="phone__screen" data-screen="screen3">
+                <img src="./images/intro_doc3.png" alt="">
+              </div>
+              <div class="phone__screen" data-screen="screen4">
+                <img src="./images/intro_doc4.png" alt="">
+              </div>
+              <div class="phone__screen" data-screen="screen5">
+                <img src="./images/intro_doc5.png" alt="">
+              </div>
+              <div class="phone__screen" data-screen="screen6">
+                <img src="./images/intro_doc6.png" alt="">
+              </div>
+            </div>
+
+            <!-- 폰 양옆 캐릭터 -->
+            <img src="./images/hero-left.svg" alt="" class="hero-character hero-character--left">
+            <img src="./images/hero-right.svg" alt="" class="hero-character hero-character--right">
+          </div>
+
+          <!-- 왼쪽 텍스트 영역 -->
+          <div class="intro2__left">
+            <div class="intro2__left-logo"></div>
+            <div class="intro2__left-eyebrow">독서지수로 측정하는 읽는 힘</div>
+            <div class="intro2__left-title">온독</div>
+            <p class="intro2__left-desc">
+              모든 학습자가 자신의 문해력 수준을 인지하고,<br>
+              수준에 맞는 독서를 통해 사고력과 어휘력을<br>
+              성장시킬 수 있도록 돕습니다.
+            </p>
+            <a href="https://example.com/ondoc-experience" target="_blank" class="intro2__cta" rel="noopener">
+              체험하러가기
+            </a>
+            <div class="intro2__note">
+              개인 읽기 지수에 맞춘 도서 추천과 진도 관리,<br>
+              내 책장과 찜·완독·맞춤 도서까지 한 번에.
+            </div>
+          </div>
+
+          <!-- 오른쪽 아이콘 영역 -->
+          <div class="intro2__right">
+            <div class="intro2__icons" aria-label="온독 주요 기능">
+              <button type="button" class="intro2-icon" data-screen-target="screen2" data-icon="home">
+                <img src="./images/icon-home.svg" alt="홈">
+              </button>
+              <button type="button" class="intro2-icon" data-screen-target="screen3" data-icon="bookshelf">
+                <img src="./images/icon-bookshelf.svg" alt="내 책장">
+              </button>
+              <button type="button" class="intro2-icon" data-screen-target="screen4" data-icon="diagnosis">
+                <img src="./images/icon-diagnosis.svg" alt="진단">
+              </button>
+              <button type="button" class="intro2-icon" data-screen-target="screen5" data-icon="report">
+                <img src="./images/icon-report.svg" alt="리포트">
+              </button>
+              <button type="button" class="intro2-icon" data-screen-target="screen6" data-icon="myon">
+                <img src="./images/icon-myon.svg" alt="myON 연계">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- =======================
+             WRITE 모드 (온작)
+        ======================== -->
+        <div class="intro2__body intro2__body--write">
+          <div class="intro2-write">
+            <div class="intro2-write__device">
+              <!-- 온작 화면 노트북/화면 이미지 -->
+              <img src="./images/intro_write_laptop.png" alt="온작문 서비스 화면">
+            </div>
+            <p class="intro2-write__desc">
+              모든 학습자가 자신의 글쓰기 수준을 정확히 이해하고, UKTA 기반의 정교한 채점과 AI의 상세한 피드백을 통해<br>
+             사고력과 표현력을 단계적으로 성장시킬 수 있도록 돕습니다.
+            </p>
+            <a href="http://ai.withrun.co.kr:3002/" target="_blank"
+               class="intro2__cta intro2__cta--write" rel="noopener">
+              온작문 바로가기
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- 푸터 include -->
+  <div data-include="./include/footer.html"></div>
+
+  <!-- include 스크립트 -->
+  <script src="./js/include.js"></script>
+
+  <!-- 인트로2 인터랙션 스크립트 -->
+  <script>
+    // ==========================
+    // READ 모드: 폰 자동 롤링 + 아이콘 연동
+    // ==========================
+    const iconButtons = document.querySelectorAll('.intro2-icon');
+    const screens = document.querySelectorAll('.phone__screen');
+
+    const TOTAL_SCREENS = 6;     // screen1 ~ screen6
+    let currentIndex = 1;
+    let autoTimer = null;
+    const AUTO_DELAY = 4000;     // 4초마다 롤링
+
+    function updateIcons(targetScreen) {
+      iconButtons.forEach(btn => {
+        const iconName = btn.dataset.icon;          // home, bookshelf...
+        const screenTarget = btn.dataset.screenTarget;
+        const img = btn.querySelector('img');
+        const isActive = screenTarget === targetScreen;
+
+        btn.classList.toggle('is-active', isActive);
+
+        const basePath = './images/icon-' + iconName;
+        img.src = isActive ? basePath + '_ov.svg' : basePath + '.svg';
+      });
+    }
+
+    function showScreenByIndex(index) {
+      const target = 'screen' + index;
+
+      screens.forEach(s => {
+        s.classList.toggle('is-active', s.dataset.screen === target);
+      });
+
+      if (index === 1) {
+        // 첫 화면일 땐 아이콘 모두 비활성
+        updateIcons('');
+      } else {
+        updateIcons(target);
+      }
+
+      currentIndex = index;
+    }
+
+    function startAutoRolling() {
+      stopAutoRolling();
+      autoTimer = setInterval(() => {
+        let next = currentIndex + 1;
+        if (next > TOTAL_SCREENS) next = 1;
+        showScreenByIndex(next);
+      }, AUTO_DELAY);
+    }
+
+    function stopAutoRolling() {
+      if (autoTimer) {
+        clearInterval(autoTimer);
+        autoTimer = null;
+      }
+    }
+
+    // 아이콘 인터랙션: 해당 화면으로 이동 + 자동 롤링 재시작
+    iconButtons.forEach(btn => {
+      const target = btn.dataset.screenTarget; // ex) "screen3"
+      const targetIndex = parseInt(target.replace('screen', ''), 10);
+
+      const handler = () => {
+        showScreenByIndex(targetIndex);
+        startAutoRolling();
+      };
+
+      btn.addEventListener('mouseenter', handler);
+      btn.addEventListener('focus', handler);
+      btn.addEventListener('click', handler);
+    });
+
+    // 초기 상태: 첫 화면 + 자동 롤링 시작
+    showScreenByIndex(1);
+    startAutoRolling();
+
+    // ==========================
+    // READ / WRITE 모드 전환
+    // ==========================
+    const bodyEl    = document.body;
+    const readTab   = document.querySelector('[data-mode="read"]');
+    const writeTab  = document.querySelector('[data-mode="write"]');
+    const readBody  = document.querySelector('.intro2__body--read');
+    const writeBody = document.querySelector('.intro2__body--write');
+
+    function activateReadMode() {
+      bodyEl.classList.add('mode-read');
+      bodyEl.classList.remove('mode-write');
+
+      readBody.classList.add('is-active');
+      writeBody.classList.remove('is-active');
+
+      readTab.classList.add('headline-tab--active');
+      readTab.classList.remove('headline-tab-link');
+
+      writeTab.classList.add('headline-tab-link');
+      writeTab.classList.remove('headline-tab--active');
+    }
+
+    function activateWriteMode() {
+      bodyEl.classList.add('mode-write');
+      bodyEl.classList.remove('mode-read');
+
+      readBody.classList.remove('is-active');
+      writeBody.classList.add('is-active');
+
+      writeTab.classList.add('headline-tab--active');
+      writeTab.classList.remove('headline-tab-link');
+
+      readTab.classList.add('headline-tab-link');
+      readTab.classList.remove('headline-tab--active');
+    }
+
+    // 읽고 탭: hover / click 시 READ 모드
+    readTab.addEventListener('mouseenter', activateReadMode);
+    readTab.addEventListener('focus', activateReadMode);
+    readTab.addEventListener('click', activateReadMode);
+
+    // 쓰다 탭: hover / click 시 WRITE 모드
+    writeTab.addEventListener('mouseenter', activateWriteMode);
+    writeTab.addEventListener('focus', activateWriteMode);
+    writeTab.addEventListener('click', activateWriteMode);
+  </script>
+</body>
+</html>
