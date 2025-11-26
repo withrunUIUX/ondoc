@@ -127,6 +127,7 @@ body.page-intro2.mode-write {
   position:absolute;
   left:24px;
   top:24px;
+  z-index:10;
 }
 .header__logo a{
   display:block;

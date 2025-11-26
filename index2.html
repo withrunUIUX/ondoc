@@ -256,10 +256,16 @@
     readTab.addEventListener('focus', activateReadMode);
     readTab.addEventListener('click', activateReadMode);
 
-    // 쓰다 탭: hover / click 시 WRITE 모드
-    writeTab.addEventListener('mouseenter', activateWriteMode);
-    writeTab.addEventListener('focus', activateWriteMode);
-    writeTab.addEventListener('click', activateWriteMode);
+   // 쓰다 탭: hover / click 시 WRITE 모드 + 클릭 시 새창으로 온작문 이동
+writeTab.addEventListener('mouseenter', activateWriteMode);
+writeTab.addEventListener('focus', activateWriteMode);
+writeTab.addEventListener('click', (e) => {
+  // 탭 UI 전환
+  activateWriteMode();
+
+  // 온작문 새창 열기
+  window.open('http://ai.withrun.co.kr:3002/', '_blank', 'noopener');
+});
   </script>
 </body>
 </html>
